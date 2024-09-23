@@ -1,0 +1,1 @@
+ALTER TABLE "savings_goals" ALTER COLUMN "end_date" DROP DEFAULT;

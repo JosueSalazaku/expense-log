@@ -16,9 +16,9 @@ export default function Navigation() {
   };
 
   return (
-    <nav className='w-screen h-[120px] flex flex-row justify-between items-center bg-zinc-900'>
+    <nav className='w-screen h-[120px] px-10 flex flex-row justify-evenly items-center bg-zinc-900'>
       <Link href="/" className='text-2xl font-bold'>Logo</Link>
-      <ul className='flex flex-row justify-center items-center font-bold gap-10 text-xl w-full'>
+      <ul className='flex flex-row justify-end items-center font-bold gap-10 text-xl w-full'>
         <SignedIn> 
           <li><Link href="/overview">Overview</Link></li>
           <li><Link href="/expenses">Expenses</Link></li>
