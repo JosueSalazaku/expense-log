@@ -16,15 +16,19 @@ export default function Navigation() {
   };
 
   return (
-    <nav className='w-screen h-[120px] px-10 flex flex-row justify-evenly items-center bg-zinc-900'>
+    <nav className='w-screen h-[120px] px-10 flex flex-row justify-between items-center bg-zinc-900'>
       <Link href="/" className='text-2xl font-bold'>Logo</Link>
-      <ul className='flex flex-row justify-end items-center font-bold gap-10 text-xl w-full'>
+      <ul className='flex flex-row justify-center items-center border rounded-3xl font-bold gap-14 px-10 py-1 text-xl'>
         <SignedIn> 
           <li><Link href="/overview">Overview</Link></li>
           <li><Link href="/expenses">Expenses</Link></li>
+        </SignedIn>
+      </ul>
+      <ul className='flex flex-row justify-center items-center gap-4'>
+        <SignedIn>
           <li><UserButton /></li>
           <li>
-            <Button onClick={handleSignOut} className='font-bold text-xl bg-zinc-500'>
+            <Button onClick={handleSignOut} className='font-bold text-xl rounded-3xl bg-zinc-500'>
               Sign Out
             </Button>
           </li>
