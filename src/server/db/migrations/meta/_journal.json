@@ -22,6 +22,13 @@
       "when": 1727085850394,
       "tag": "0002_nappy_stranger",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1727200492167,
+      "tag": "0003_confused_gateway",
+      "breakpoints": true
     }
   ]
 }

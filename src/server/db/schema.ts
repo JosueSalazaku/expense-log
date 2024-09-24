@@ -18,6 +18,16 @@ export const expenses = pgTable('expenses', {
   createdAt: timestamp('created_at').defaultNow(),
 });
 
+export const income = pgTable('income', {
+  id: serial('id').primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id),
+  amount: decimal('amount', { precision: 10, scale: 2 }).notNull(),
+  source: varchar('source', { length: 255 }).notNull(),
+  date: date('date').notNull(),
+  notes: text('notes'),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
 export const categories = pgTable('categories', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 50 }).notNull(),

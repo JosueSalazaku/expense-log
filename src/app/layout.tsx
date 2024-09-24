@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Navigation from "./Components/Navigation";
+import Navigation from "../Components/Navigation";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Expense Log',
+  title: "Expense Log",
   description: "Track your spending habits",
 };
 
@@ -26,15 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white font-bold`}
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white font-bold`}
         >
-       <Navigation />  
-        {children}
-      </body>
+          <Navigation />
+          {children}
+        </body>
       </html>
-  </ClerkProvider>
+    </ClerkProvider>
   );
 }
