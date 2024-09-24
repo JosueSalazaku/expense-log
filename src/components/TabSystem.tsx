@@ -1,29 +1,36 @@
+"use client"
 import React, { useState } from 'react';
+import { Button } from '@/Components/ui/button';
 
-export default function TabSystem() {
-  const [activeTab, setActiveTab] = useState("Expense");
+export default function ToggleTabSystem() {
+  const [activeTab, setActiveTab] = useState("Expense"); 
 
-    const handleTabClick = (tabName: string) => {
-    setActiveTab(tabName);
+  const handleTabClick = (tabName: string) => {
+    setActiveTab(tabName); 
   };
 
   return (
     <div>
-      <div className="tab-buttons">
-        <button
+      <div className="flex justify-center items-center gap-4 border h-fit w-fit p-4">
+        <Button
           onClick={() => handleTabClick("Expense")}
-          className={activeTab === "Expense" ? "active" : ""}
+          className={`px-4 py-2 ${
+            activeTab === "Expense" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+          }`}
         >
           Expense
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => handleTabClick("Income")}
-          className={activeTab === "Income" ? "active" : ""}
+          className={`px-4 py-2 ${
+            activeTab === "Income" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+          }`}
         >
           Income
-        </button>
-      </div>
-      <div className="tab-content">
+        </Button>
+          </div>
+          
+      <div className="tab-content mt-4">
         {activeTab === "Expense" && <div>Expense Form</div>}
         {activeTab === "Income" && <div>Income Form</div>}
       </div>
