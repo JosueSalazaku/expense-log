@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { SignedIn, SignedOut, UserButton, useAuth } from "@clerk/nextjs";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 export default function Navigation() {

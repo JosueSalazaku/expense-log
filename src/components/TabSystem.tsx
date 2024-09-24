@@ -1,12 +1,12 @@
-"use client"
-import React, { useState } from 'react';
-import { Button } from '@/Components/ui/button';
+"use client";
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function ToggleTabSystem() {
-  const [activeTab, setActiveTab] = useState("Expense"); 
+  const [activeTab, setActiveTab] = useState("Expense");
 
   const handleTabClick = (tabName: string) => {
-    setActiveTab(tabName); 
+    setActiveTab(tabName);
   };
 
   return (
@@ -15,7 +15,9 @@ export default function ToggleTabSystem() {
         <Button
           onClick={() => handleTabClick("Expense")}
           className={`px-4 py-2 ${
-            activeTab === "Expense" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+            activeTab === "Expense"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 text-black"
           }`}
         >
           Expense
@@ -23,13 +25,15 @@ export default function ToggleTabSystem() {
         <Button
           onClick={() => handleTabClick("Income")}
           className={`px-4 py-2 ${
-            activeTab === "Income" ? "bg-blue-500 text-white" : "bg-gray-200 text-black"
+            activeTab === "Income"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 text-black"
           }`}
         >
           Income
         </Button>
-          </div>
-          
+      </div>
+
       <div className="tab-content mt-4">
         {activeTab === "Expense" && <div>Expense Form</div>}
         {activeTab === "Income" && <div>Income Form</div>}
