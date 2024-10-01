@@ -15,6 +15,17 @@ export interface User {
     currency: string; 
     createdAt: Date;
   }
+
+  export interface Income {
+    id: number;  
+    userId: string;  
+    amount: number; 
+    source: string; 
+    date: string; 
+    notes: string | null;  
+    currency: string; 
+    createdAt: Date;
+  }
   
   export interface Category {
     id: number;  
