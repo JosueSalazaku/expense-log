@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import React from "react";
 import { SignedIn, SignedOut, UserButton, useAuth } from "@clerk/nextjs";
@@ -38,7 +37,7 @@ export default function Navigation() {
           <li>
             <Button
               onClick={handleSignOut}
-              className="font-bold text-xl rounded-3xl bg-zinc-500"
+              className="font-bold text-xl items-center rounded-3xl bg-zinc-500"
             >
               Sign Out
             </Button>

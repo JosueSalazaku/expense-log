@@ -29,7 +29,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white font-bold`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900 text-white font-bold`}
         >
           <Navigation />
           {children}
