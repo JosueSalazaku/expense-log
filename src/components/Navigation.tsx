@@ -15,11 +15,11 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="w-screen h-20 px-10 flex flex-row justify-between items-center">
+    <nav className="w-screen h-20 px-10 flex flex-row justify-between gap-14 items-center">
       <Link href="/" className="text-2xl font-bold">
         Logo
       </Link>
-      <ul className="flex flex-row justify-center items-center border rounded-3xl font-medium gap-14 px-10 py-1 text-xl">
+      <ul className="flex flex-row justify-center ml-24 items-center border rounded-3xl font-medium gap-14 px-10 py-1 text-xl">
         <SignedIn>
           <li>
             <Link href="/overview">Overview</Link>
