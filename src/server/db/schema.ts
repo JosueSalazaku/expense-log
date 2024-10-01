@@ -25,6 +25,7 @@ export const income = pgTable('income', {
   source: varchar('source', { length: 255 }).notNull(),
   date: date('date').notNull(),
   notes: text('notes'),
+  currency: varchar('currency', { length: 3 }).default('EUR'),
   createdAt: timestamp('created_at').defaultNow(),
 });
 
