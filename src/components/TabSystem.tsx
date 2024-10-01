@@ -13,10 +13,10 @@ export default function ToggleTabSystem() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex justify-center items-center rounded-lg h-fit w-fit border-2 border-gray-300 p-1 mb-6">
+      <div className="flex justify-center items-center rounded-lg h-fit w-fit  p-5 mb-6">
         <Button
           onClick={() => handleTabClick("Expense")}
-          className={`rounded-l-lg rounded-r-none px-4 py-2 transition ${
+          className={`rounded-l-lg rounded-r-none px-4 py-2 transition h-14 font-bold ${
             activeTab === "Expense"
               ? "bg-blue-500 text-white"
               : "bg-gray-200 text-black"
@@ -26,7 +26,7 @@ export default function ToggleTabSystem() {
         </Button>
         <Button
           onClick={() => handleTabClick("Income")}
-          className={`rounded-r-lg rounded-l-none px-4 py-2 transition ${
+          className={`rounded-r-lg rounded-l-none px-4 py-2 transition h-14 font-bold ${
             activeTab === "Income"
               ? "bg-blue-500 text-white"
               : "bg-gray-200 text-black"
@@ -35,7 +35,6 @@ export default function ToggleTabSystem() {
           Income
         </Button>
       </div>
-
       <div className="tab-content mt-4">
         {activeTab === "Expense" && (
           <Card className="w-[550px] p-6 bg-white rounded-lg shadow-md">
