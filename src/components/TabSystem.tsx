@@ -1,6 +1,8 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from './ui/card';
+import { Input } from './ui/input';
 
 export default function ToggleTabSystem() {
   const [activeTab, setActiveTab] = useState("Expense");
@@ -11,10 +13,10 @@ export default function ToggleTabSystem() {
 
   return (
     <div>
-      <div className="flex justify-center items-center gap-4 border h-fit w-fit p-4">
+      <div className="flex justify-center items-center  rounded-lg h-fit w-fit">
         <Button
           onClick={() => handleTabClick("Expense")}
-          className={`px-4 py-2 ${
+          className={`rounded-l-lg rounded-r-none px-4 py-2 ${
             activeTab === "Expense"
               ? "bg-blue-500 text-white"
               : "bg-gray-200 text-black"
@@ -24,7 +26,7 @@ export default function ToggleTabSystem() {
         </Button>
         <Button
           onClick={() => handleTabClick("Income")}
-          className={`px-4 py-2 ${
+          className={`rounded-r-lg rounded-l-none px-4 py-2 ${
             activeTab === "Income"
               ? "bg-blue-500 text-white"
               : "bg-gray-200 text-black"
@@ -34,10 +36,23 @@ export default function ToggleTabSystem() {
         </Button>
       </div>
 
+
       <div className="tab-content mt-4">
-        {activeTab === "Expense" && <div>Expense Form</div>}
-        {activeTab === "Income" && <div>Income Form</div>}
+        {activeTab === "Expense" && 
+        <div>
+                      <Card className='w-[550px] h-[700px] bg-none '>
+                          <h1 className='text-2xl text-white'>Exspenses</h1>
+                <Input className='bg-none w- border' />
+            </Card>
+        </div>}
+        {activeTab === "Income" && 
+        <div>
+        <Card className='w-[350px]'>
+            
+        </Card>
+    </div>}
       </div>
     </div>
   );
 }
+
